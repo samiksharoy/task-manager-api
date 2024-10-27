@@ -1,0 +1,51 @@
+### User Registration
+POST http://localhost:3000/user/register
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "password": "Password123",
+  "repeat_password": "Password123",
+  "country": 1,
+  "language": "en"
+}
+
+### Another User Registration (Email already in use)
+POST http://localhost:3000/user/register
+Content-Type: application/json
+
+{
+  "name": "Jane Doe",
+  "email": "johndoe@example.com",
+  "password": "Password123",
+  "repeat_password": "Password123",
+  "country": 1,
+  "language": "en"
+}
+
+### User Registration with Invalid Email
+POST http://localhost:3000/user/register
+Content-Type: application/json
+
+{
+  "name": "Invalid User",
+  "email": "invalidemail.com",
+  "password": "Password123",
+  "repeat_password": "Password123",
+  "country": 1,
+  "language": "en"
+}
+
+### User Registration with Password Mismatch
+POST http://localhost:3000/user/register
+Content-Type: application/json
+
+{
+  "name": "Mismatched User",
+  "email": "mismatched@example.com",
+  "password": "Password123",
+  "repeat_password": "DifferentPassword456",
+  "country": 1,
+  "language": "en"
+}
