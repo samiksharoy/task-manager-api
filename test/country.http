@@ -1,0 +1,2 @@
+### Get All Active Countries
+GET http://localhost:3000/country/getall

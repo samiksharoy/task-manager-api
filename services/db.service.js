@@ -10,7 +10,7 @@ const pool = mysql.createPool({
   queueLimit: 0,
 });
 
-async function execute_procedure(procedureName, inputs) {
+async function execute_procedure(procedureName, inputs=[]) {
   try {
     const connection = await pool.getConnection();
     const placeholders = inputs.map(() => '?').join(', ');
